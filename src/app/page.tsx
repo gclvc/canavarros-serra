@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { FadeIn } from "@/components/ui/fade-in"
 import { Phone, Star, ShieldCheck, HeartPulse, ChevronRight, CheckCircle2 } from "lucide-react"
 
 export default function Home() {
@@ -78,7 +79,7 @@ export default function Home() {
 
         {/* ROW: DIFERENCIAIS */}
         <section className="py-20 bg-card">
-          <div className="container mx-auto px-4">
+          <FadeIn className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-border/50">
               
               {/* Div 1 */}
@@ -118,12 +119,12 @@ export default function Home() {
               </div>
 
             </div>
-          </div>
+          </FadeIn>
         </section>
 
         {/* FAST TRACKS */}
         <section className="py-12 bg-background">
-          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
+          <FadeIn className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
             <div className="group relative h-64 rounded-3xl overflow-hidden cursor-pointer shadow-md border border-border">
               <div className="absolute inset-0 bg-secondary/80 mix-blend-multiply transition-opacity group-hover:opacity-60 z-10"></div>
               <Image src="/assets/IMG_4277.JPG" fill alt="Mamas" className="object-cover" />
@@ -141,12 +142,12 @@ export default function Home() {
                  <p className="mt-2 text-sm opacity-80 font-semibold tracking-widest uppercase">50-70 anos</p>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </section>
 
         {/* CIRURGIA DAS MAMAS */}
         <section id="mamas" className="py-24 bg-card">
-          <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+          <FadeIn className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-[400px] md:h-[650px] w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-secondary/20">
                <Image 
                 src="/assets/IMG_4281.JPG" 
@@ -175,12 +176,12 @@ export default function Home() {
               Saber mais sobre a R24R <ChevronRight className="w-5 h-5 ml-2" />
             </a>
             </div>
-          </div>
+          </FadeIn>
         </section>
 
         {/* CIRURGIA FACIAL */}
         <section id="face" className="py-24 bg-background">
-          <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+          <FadeIn className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
             
             <div className="space-y-8 lg:order-1 order-2 pr-4">
               <h2 className="font-heading text-4xl lg:text-5xl mb-4 text-foreground tracking-tight">
@@ -210,12 +211,12 @@ export default function Home() {
                 className="object-cover object-center"
               />
             </div>
-          </div>
+          </FadeIn>
         </section>
 
         {/* COSMIATRIA */}
         <section id="cosmiatria" className="py-24 bg-[#5A3E2B] text-background">
-          <div className="container mx-auto px-4 text-center">
+          <FadeIn className="container mx-auto px-4 text-center">
              <span className="text-secondary font-bold text-xs tracking-[0.2em] uppercase">Tecnologia & Inovação</span>
              <h2 className="font-heading text-4xl lg:text-5xl mt-2 mb-16 tracking-tight text-[#F5EEE6]">
                 Cosmiatria Avançada
@@ -241,12 +242,12 @@ export default function Home() {
                   </p>
                </div>
              </div>
-          </div>
+          </FadeIn>
         </section>
 
         {/* GALERIA & AVALIAÇÕES */}
         <section className="py-28 bg-card">
-          <div className="container mx-auto px-4 text-center">
+          <FadeIn className="container mx-auto px-4 text-center">
             <h2 className="font-heading text-4xl lg:text-5xl mb-4 text-foreground tracking-tight">
               A Excelência na Prática
             </h2>
@@ -272,12 +273,12 @@ export default function Home() {
                </h3>
                <p className="text-sm uppercase tracking-widest text-primary font-bold">Avaliação Verificada no Google</p>
             </div>
-          </div>
+          </FadeIn>
         </section>
 
         {/* SOBRE O CIRURGIÃO */}
         <section id="sobre" className="py-32 bg-background">
-          <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+          <FadeIn className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
              
              {/* Imagem Dr */}
              <div className="relative h-[400px] md:h-[700px] w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl lg:order-1 order-2 border border-secondary/20">
@@ -323,12 +324,12 @@ export default function Home() {
             </a>
             </div>
 
-          </div>
+          </FadeIn>
         </section>
 
         {/* CONTATO & LOCALIZAÇÃO */}
         <section id="contato" className="py-24 bg-background">
-          <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16">
+          <FadeIn className="container mx-auto px-4 grid lg:grid-cols-2 gap-16">
             <div className="bg-card p-10 md:p-14 rounded-[3rem] border border-border shadow-xl">
                <h2 className="font-heading text-4xl mb-6 text-foreground tracking-tight">
                  Agende sua Avaliação
@@ -393,14 +394,14 @@ export default function Home() {
                  </div>
                </div>
             </div>
-          </div>
+          </FadeIn>
         </section>
 
       </main>
 
       {/* INSTITUTIONAL FOOTER */}
       <footer className="bg-foreground text-card py-16 mt-auto">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start gap-12 text-sm">
+        <FadeIn className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start gap-12 text-sm">
           <div className="max-w-sm">
             <p className="font-heading text-2xl mb-4 text-primary">Canavarros Serra</p>
             <p className="opacity-90 font-medium">Dr. Márcio Augusto M. Canavarros Serra</p>
@@ -429,7 +430,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </footer>
     </div>
   )

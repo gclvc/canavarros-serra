@@ -14,8 +14,22 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Canavarros Serra | Cirurgia Plástica",
-  description: "Tradição familiar, expertise e segurança em Cirurgia Plástica.",
+  title: "Canavarros Serra | Cirurgia Plástica Premium em Mato Grosso",
+  description: "Clínica de cirurgia plástica guiada pelo Dr. Márcio Canavarros (CRM MT 6323). Especialistas em R24R, Facelift Deep Plane e Cosmiatria em Cuiabá e Sorriso.",
+  keywords: ["Cirurgia Plástica", "Mato Grosso", "Cuiabá", "Sorriso", "Dr. Márcio Canavarros", "Prótese de Mama R24R", "Facelift Deep Plane", "Morpheus"],
+  authors: [{ name: "Dr. Márcio Canavarros" }],
+  openGraph: {
+    title: "Canavarros Serra Cirurgia Plástica",
+    description: "Tradição familiar, expertise e segurança focada em resultados naturais e harmoniosos.",
+    url: "https://canavarrosserra.com.br", // replace with real domain later
+    siteName: "Canavarros Serra",
+    locale: "pt_BR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({
