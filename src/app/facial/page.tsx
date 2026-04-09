@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { FadeIn } from "@/components/ui/fade-in"
+import { ChevronRight, ShieldCheck, CheckCircle2, Droplet, Sparkles, Activity, PlayCircle } from "lucide-react"
 import { Reviews } from "@/components/ui/reviews"
 import { FAQ } from "@/components/ui/faq"
 import { ContactForm } from "@/components/ui/contact-form"
