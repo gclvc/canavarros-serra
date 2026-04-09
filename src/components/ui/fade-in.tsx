@@ -1,7 +1,12 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { ReactNode } from "react"
+import { ReactNode, useEffect, useRef, useState } from "react"
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
 
 interface FadeInProps {
   children: ReactNode
@@ -18,36 +23,59 @@ export function FadeIn({
   className = "",
   duration = 0.8
 }: FadeInProps) {
-  
-  const getInitial = () => {
+  const [isVisible, setIsVisible] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // Fallback timer just in case IO fails in weird server environments
+    const fallbackTimeout = setTimeout(() => setIsVisible(true), 1500)
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          clearTimeout(fallbackTimeout)
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }
+    )
+
+    if (ref.current) observer.observe(ref.current)
+    return () => {
+      observer.disconnect()
+      clearTimeout(fallbackTimeout)
+    }
+  }, [])
+
+  const getBaseTransform = () => {
     switch (direction) {
-      case "up": return { opacity: 0, y: 40 }
-      case "down": return { opacity: 0, y: -40 }
-      case "left": return { opacity: 0, x: 40 }
-      case "right": return { opacity: 0, x: -40 }
-      case "none": return { opacity: 0 }
+      case "up": return "translate-y-16 scale-95"
+      case "down": return "-translate-y-16 scale-95"
+      case "left": return "translate-x-16 scale-95"
+      case "right": return "-translate-x-16 scale-95"
+      case "none": return "scale-95"
+      default: return "translate-y-16 scale-95"
     }
   }
 
-  const getAnimate = () => {
-    switch (direction) {
-      case "up":
-      case "down": return { opacity: 1, y: 0 }
-      case "left":
-      case "right": return { opacity: 1, x: 0 }
-      case "none": return { opacity: 1 }
-    }
-  }
+  const baseState = `opacity-0 ${getBaseTransform()}`
+  const inState = "opacity-100 translate-y-0 translate-x-0 scale-100"
 
   return (
-    <motion.div
-      initial={getInitial()}
-      whileInView={getAnimate()}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }} // smooth easeOut
-      className={className}
+    <div
+      ref={ref}
+      className={cn(
+        "transition-all ease-[cubic-bezier(0.16,1,0.3,1)] transform-gpu", 
+        isVisible ? inState : baseState,
+        className
+      )}
+      style={{ 
+        transitionDuration: `${duration}s`, 
+        transitionDelay: `${delay}s` 
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }

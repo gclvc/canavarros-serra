@@ -32,6 +32,10 @@ export const metadata: Metadata = {
   }
 };
 
+import Script from "next/script";
+import { Header } from "@/components/ui/header";
+import { Footer } from "@/components/ui/footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,7 +46,52 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${manrope.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <head>
+        <Script id="ga-script" strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=[COLE_SEU_GA_AQUI]`} />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '[COLE_SEU_GA_AQUI]');
+          `}
+        </Script>
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '[COLE_SEU_PIXEL_AQUI]');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+      </head>
+      <body className="min-h-[100dvh] flex flex-col font-sans">
+        <Header />
+        <main className="flex-grow flex flex-col items-stretch">
+          {children}
+        </main>
+        <Footer />
+        <svg
+          className="pointer-events-none fixed inset-0 z-50 h-full w-full opacity-[0.03] mix-blend-color-burn"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <filter id="noise">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.75"
+              numOctaves="3"
+              stitchTiles="stitch"
+            />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#noise)" />
+        </svg>
+      </body>
     </html>
   );
 }
