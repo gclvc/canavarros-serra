@@ -13,7 +13,7 @@ export function Header() {
   const links = [
     { name: "Cirurgia das Mamas", href: "/mama" },
     { name: "Cirurgia Facial", href: "/facial" },
-    { name: "Contorno Corporal", href: "/#corpo" },
+    { name: "Contorno Corporal", href: "/corpo" },
     { name: "Cosmiatria & Estética", href: "/estetica" },
     { name: "Nossa História", href: "/#sobre" },
   ]
@@ -51,7 +51,7 @@ export function Header() {
         </nav>
         
         {/* DESKTOP CTA */}
-        <a href="https://wa.me/5565996236875" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-sm transition-all rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 hidden sm:flex shadow-md shadow-primary/20 h-10">
+        <a href="#contato" className="inline-flex items-center justify-center text-sm transition-all rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 hidden sm:flex shadow-md shadow-primary/20 h-10">
             Agendar Avaliação
         </a>
 
@@ -80,7 +80,7 @@ export function Header() {
               {link.name}
             </Link>
           ))}
-          <a href="https://wa.me/5565996236875" target="_blank" rel="noopener noreferrer" className="inline-flex mt-8 items-center justify-center text-lg transition-all rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 shadow-xl">
+          <a href="#contato" className="inline-flex mt-8 items-center justify-center text-lg transition-all rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 shadow-xl" onClick={() => setMobileMenuOpen(false)}>
             Atendimento Online
           </a>
         </nav>

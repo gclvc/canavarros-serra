@@ -3,30 +3,55 @@
 import { useState } from "react"
 import { Button } from "./button"
 import { Input } from "./input"
-import { Loader2 } from "lucide-react"
+import { Loader2, Check } from "lucide-react"
+
+const AVAILABLE_PROCEDURES = [
+  "Facelift (Deep Plane)",
+  "Blefaroplastia",
+  "Prótese de Mama (R24R)",
+  "Mastopexia",
+  "Lipo HD / Abdominoplastia",
+  "Botox / Preventivo",
+  "Bioestimuladores",
+  "Morpheus 3D",
+  "Skincare Médico",
+  "Clube de Assinatura",
+  "Avaliação Geral"
+]
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    procedure: "",
     message: ""
   })
+  const [selectedProcedures, setSelectedProcedures] = useState<string[]>([])
+
+  const toggleProcedure = (proc: string) => {
+    setSelectedProcedures(prev => 
+      prev.includes(proc) 
+        ? prev.filter(p => p !== proc)
+        : [...prev, proc]
+    )
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulando um loading leve p/ UX Cinematográfica
     setTimeout(() => {
       window.fbq?.('track', 'Lead', {
-        content_name: formData.procedure,
+        content_name: selectedProcedures.join(', '),
         currency: 'BRL'
       })
 
-      const phoneTarget = "5565996236875" // Cuiabá Official
-      const text = `Olá, me chamo *${formData.name}*.\nGostaria de falar sobre: *${formData.procedure}*.\nMeu contato: ${formData.phone}\n\nObservação: ${formData.message}`
+      const phoneTarget = "5565996236875"
+      const procText = selectedProcedures.length > 0 
+        ? selectedProcedures.join(' • ') 
+        : "Avaliação Geral"
+      
+      const text = `Olá, me chamo *${formData.name}*.\n\nGostaria de falar sobre:\n*${procText}*\n\nMeu contato: ${formData.phone}${formData.message ? `\n\nObservação: ${formData.message}` : ''}`
       
       const whatsappUrl = `https://wa.me/${phoneTarget}?text=${encodeURIComponent(text)}`
       window.open(whatsappUrl, "_blank")
@@ -56,29 +81,25 @@ export function ContactForm() {
           onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
         />
       </div>
-      <div className="space-y-2 sm:col-span-2">
-        <label className="text-sm font-medium">Área de Interesse</label>
-        <select 
-          required
-          className="w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          value={formData.procedure}
-          onChange={(e) => setFormData(prev => ({ ...prev, procedure: e.target.value }))}
-        >
-          <option value="" disabled>Selecione o procedimento...</option>
-          <optgroup label="Cirurgia Plástica">
-            <option value="Cirurgia das Mamas">Mastopexia / Prótese de Mama (R24R)</option>
-            <option value="Cirurgia Facial">Lifting Facial (Deep Plane) / Blefaro</option>
-          </optgroup>
-          <optgroup label="Cosmiatria & Estética">
-            <option value="Botox e Prevenção">Botox / Skincare / Prevenção</option>
-            <option value="Bioestimuladores">Bioestimuladores / Rejuvenescimento</option>
-            <option value="Morpheus">Morpheus Face & Body</option>
-            <option value="Planos e Clube">Planos de Assinatura (Clube Canavarros)</option>
-          </optgroup>
-          <option value="Avaliação Geral">Avaliação Geral Inicial</option>
-        </select>
+      <div className="space-y-3 sm:col-span-2 pt-2">
+        <label className="text-sm font-medium">Áreas de Interesse (Selecione uma ou mais)</label>
+        <div className="flex flex-wrap gap-2">
+          {AVAILABLE_PROCEDURES.map(proc => {
+            const isSelected = selectedProcedures.includes(proc)
+            return (
+              <div 
+                key={proc}
+                onClick={() => toggleProcedure(proc)}
+                className={`px-4 py-2 rounded-full text-xs font-medium border cursor-pointer transition-all duration-300 flex items-center gap-2 select-none active:scale-95 ${isSelected ? 'bg-primary border-primary text-primary-foreground shadow-md shadow-primary/20' : 'bg-background border-border text-foreground/70 hover:border-primary/50 hover:-translate-y-0.5'}`}
+              >
+                {isSelected && <Check className="w-3 h-3" />}
+                {proc}
+              </div>
+            )
+          })}
+        </div>
       </div>
-      <div className="space-y-2 sm:col-span-2">
+      <div className="space-y-2 sm:col-span-2 pt-2">
         <label className="text-sm font-medium">Mensagem Adicional (Opcional)</label>
         <Input 
           placeholder="Como podemos te ajudar hoje?" 

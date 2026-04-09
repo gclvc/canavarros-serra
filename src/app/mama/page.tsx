@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { FadeIn } from "@/components/ui/fade-in"
-import { ChevronRight, ShieldCheck, CheckCircle2, Activity, PlayCircle } from "lucide-react"
+import { Reviews } from "@/components/ui/reviews"
+import { FAQ } from "@/components/ui/faq"
+import { ContactForm } from "@/components/ui/contact-form"
 
 export default function MamaPage() {
   return (
@@ -9,7 +11,7 @@ export default function MamaPage() {
       <section className="relative pt-10 pb-28 overflow-hidden min-h-[90dvh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/assets/IMG_4279.JPG" 
+            src="/assets/IMG_4281.JPG" 
             alt="Cirurgia das Mamas" 
             fill 
             className="object-cover object-center opacity-40 mix-blend-luminosity duration-[10000ms] animate-out zoom-in fill-mode-forwards"
@@ -33,8 +35,8 @@ export default function MamaPage() {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-6">
-              <a href="https://wa.me/5565996236875?text=Ol%C3%A1%2C%20Dr.%20M%C3%A1rcio!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20especializada%20para%20Cirurgia%20das%20Mamas%20(R24R)." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-sm transition-all rounded-full text-base px-10 bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/40 h-16 hover:scale-105 font-bold">
-                Agendar Avaliação de Mamas
+              <a href="#contato" className="inline-flex items-center justify-center text-sm transition-all rounded-full text-base px-10 bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/40 h-16 hover:scale-105 font-bold">
+                Agendar Avaliação
               </a>
             </div>
           </FadeIn>
@@ -83,7 +85,7 @@ export default function MamaPage() {
 
           <div className="relative h-[500px] md:h-[700px] w-full rounded-[3rem] overflow-hidden shadow-2xl border border-secondary/20 group cursor-default">
              <Image 
-              src="/assets/IMG_4279.JPG" 
+              src="/assets/IMG_4281.JPG" 
               alt="Mamas" 
               fill 
               className="object-cover object-center group-hover:scale-110 transition-transform duration-[4000ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
@@ -125,6 +127,35 @@ export default function MamaPage() {
                   </p>
                </div>
              </div>
+          </FadeIn>
+      </section>
+
+      <FAQ items={[
+        {q: "Como é possível levantar os braços em 24h?", a: "O R24R usa instrumentos precisos para dissecção sem sangramento, blocos anestésicos modernos e o sutiã interno, permitindo que a musculatura seja inteiramente preservada e a prótese se estabilize."},
+        {q: "Qual a diferença entre Mastopexia com e sem silicone?", a: "Com prótese, adicionamos volume marcado utilizando o implante. Sem prótese, usamos o próprio tecido glandular da paciente para montar uma estrutura auto-sustentável mais reservada."},
+        {q: "O que é o Sutiã Interno (Grip Plane)?", a: "Construímos um reforço estrutural no sulco da mama. Isso funciona como um pilar de sustentação definitiva, impedindo que a prótese ceda para baixo ao longo dos anos com a gravidade."},
+        {q: "A recuperação do R24R é indolor?", a: "Zero dor é relativo a cada organismo, mas o protocolo minimiza drasticamente a dor em comparação a técnicas antigas, não exigindo repouso absoluto ou dependência total de terceiros."}
+      ]} />
+
+      <Reviews category="mama" />
+
+      <section id="contato" className="py-16 md:py-24 bg-card border-t border-border">
+          <FadeIn className="container mx-auto px-4 max-w-4xl">
+            <div className="bg-background rounded-[3rem] p-8 md:p-14 shadow-2xl border border-primary/20 relative overflow-hidden">
+               <div className="absolute inset-0 bg-primary/5"></div>
+               <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+              
+              <div className="relative z-10">
+                <div className="text-center mb-10">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-4">
+                    <Activity className="w-3 h-3" /> Recuperação Rápida
+                  </span>
+                  <h3 className="font-heading text-3xl md:text-4xl mb-4">Dê o Próximo Passo</h3>
+                  <p className="text-foreground/70 mb-6">Mamas estáveis e firmes com o método R24R. Fale diretamente com nossa equipe.</p>
+                </div>
+                <ContactForm />
+              </div>
+            </div>
           </FadeIn>
       </section>
     </main>

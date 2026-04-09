@@ -2,6 +2,8 @@ import Image from "next/image"
 import { FadeIn } from "@/components/ui/fade-in"
 import { ContactForm } from "@/components/ui/contact-form"
 import { Sparkles, Activity, Plus, Award, CheckCircle2, ShieldCheck, Zap, Phone } from "lucide-react"
+import { Reviews } from "@/components/ui/reviews"
+import { FAQ } from "@/components/ui/faq"
 
 export default function EsteticaPage() {
   return (
@@ -65,6 +67,32 @@ export default function EsteticaPage() {
                  <h3 className="font-heading text-xl text-[#d1b48c] mb-3 transition-transform duration-500 group-hover:translate-x-1">Naturalidade</h3>
                  <p className="text-sm opacity-80 transition-transform duration-500 group-hover:translate-x-1 delay-75">Resultados invisíveis e harmônicos que fortalecem a sua identidade facial orgânica.</p>
                </div>
+             </div>
+          </FadeIn>
+        </section>
+
+        {/* LISTA COMPLETA DE PROCEDIMENTOS */}
+        <section className="py-24 bg-background border-y border-border/30">
+          <FadeIn className="container mx-auto px-4 max-w-5xl">
+            <div className="text-center mb-16">
+              <span className="text-primary font-bold text-xs tracking-[0.2em] uppercase">Nosso Portfólio</span>
+              <h2 className="font-heading text-4xl lg:text-5xl mt-2 tracking-tight">O Foco da Nossa Expertise</h2>
+              <p className="mt-4 text-foreground/70">Domínio absoluto sobre as terapias não cirúrgicas mais modernas do mundo.</p>
+            </div>
+             
+             <div className="flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-5">
+               {[
+                 "Toxina Botulínica (Botox)", "Morpheus Face & Body", 
+                 "Bioestimuladores de Colágeno (Radiesse/Sculptra)", "Peeling Químico de TCA", 
+                 "Skincare Médico Personalizado", "Preenchimento com Ácido Hialurônico",
+                 "Protocolos Full Face (Revitalização global)", "Microagulhamento Robótico",
+                 "Tratamento de Flacidez Profunda Corporal", "Lifting Não-Cirúrgico",
+                 "Prevenção Muscular Estrutural", "Regeneração Dérmica 360º"
+               ].map((proc, idx) => (
+                 <div key={idx} className="bg-card border border-border/80 hover:border-primary text-foreground/90 md:text-base text-sm px-6 py-4 rounded-full shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-[400ms] ease-out font-medium flex items-center cursor-default group">
+                   <div className="w-2 h-2 rounded-full bg-primary/40 mr-3 group-hover:bg-primary group-hover:scale-[1.8] group-hover:shadow-[0_0_10px_rgba(209,180,140,0.5)] transition-all duration-300"></div> {proc}
+                 </div>
+               ))}
              </div>
           </FadeIn>
         </section>
@@ -211,6 +239,15 @@ export default function EsteticaPage() {
             
           </FadeIn>
         </section>
+
+        <FAQ items={[
+          {q: "O Botox (preventivo) deixa o rosto congelado?", a: "Não na nossa clínica. Adotamos a abordagem 'Botox Estrutural', focada em enfraquecer apenas o músculo que traciona o rosto para baixo. Preservamos a elevação e a mímica facial autêntica da paciente."},
+          {q: "Quantas sessões de Morpheus são necessárias?", a: "O protocolo inicial ideal envolve de 2 a 3 sessões, variando conforme o grau de flacidez dérmica e gordura. Os resultados colagênicos continuam aparecendo progressivamente por meses."},
+          {q: "Como funciona o Programa Face 365?", a: "Desenhado sob medida, este programa garante a sua arquitetura anual. Nossos pacientes têm acesso garantido aos tratamentos chaves de toxina e estímulo de colágeno divididos ao longo dos 12 meses."},
+          {q: "O Peeling de TCA exige ficar em casa?", a: "O TCA promove uma renovação celular muito profunda. Há uma descamação visível e controlada por alguns dias, porém, organizando o cronograma para curtas janelas de repouso social, é totalmente gerenciável."}
+        ]} />
+
+        <Reviews category="estetica" />
 
         {/* CTA FINAL DE AGENDAMENTO (Contornando o ContactForm com temática Estética) */}
         <section id="contato" className="py-24 bg-card border-t border-border">

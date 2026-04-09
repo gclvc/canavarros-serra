@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/ui/fade-in"
 import { ContactForm } from "@/components/ui/contact-form"
+import { FAQ } from "@/components/ui/faq"
 import { Phone, Star, ShieldCheck, HeartPulse, ChevronRight, CheckCircle2, Sparkles } from "lucide-react"
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                    <a href="https://wa.me/5565996236875" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-sm transition-all rounded-full text-base px-10 bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/30 h-14 md:h-16 w-full sm:w-auto font-bold uppercase tracking-widest hover:-translate-y-1 hover:scale-110 duration-300">
+                    <a href="#contato" className="inline-flex items-center justify-center text-sm transition-all rounded-full text-base px-10 bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/30 h-14 md:h-16 w-full sm:w-auto font-bold uppercase tracking-widest hover:-translate-y-1 hover:scale-110 duration-300">
                       Fale com a Clínica
                     </a>
                   </div>
@@ -105,7 +106,7 @@ export default function Home() {
             {/* Pill 1: Mamas */}
             <a href="/mama" className="group relative h-64 md:h-[400px] rounded-[3rem] overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl block bg-card">
               <div className="absolute inset-0 bg-[#5A3E2B]/50 mix-blend-multiply transition-colors group-hover:bg-[#5A3E2B]/10 z-10 duration-[1500ms]"></div>
-              <Image src="/assets/IMG_4279.JPG" fill alt="Mamas" className="object-cover transform group-hover:scale-110 transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)]" />
+              <Image src="/assets/IMG_4281.JPG" fill alt="Mamas" className="object-cover transform group-hover:scale-110 transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)]" />
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-[#F5EEE6] transform transition-transform duration-[1000ms] ease-out group-hover:-translate-y-3">
                  <h3 className="font-heading text-3xl md:text-3xl lg:text-4xl font-bold tracking-tight drop-shadow-xl text-center px-4">Cirurgia das Mamas</h3>
                  <p className="mt-2 text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] font-semibold tracking-[0.2em] uppercase delay-100">R24R • Mastopexia/Redutora</p>
@@ -120,7 +121,7 @@ export default function Home() {
             {/* Pill 2: Face */}
             <a href="/facial" className="group relative h-64 md:h-[400px] rounded-[3rem] overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl block bg-card">
               <div className="absolute inset-0 bg-[#3d2c20]/60 group-hover:bg-[#3d2c20]/20 transition-colors z-10 duration-[1500ms]"></div>
-               <Image src="/assets/IMG_4281.JPG" fill alt="Face" className="object-cover transform group-hover:scale-110 transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)]" />
+               <Image src="/assets/novo_facial.png" fill alt="Face" className="object-cover transform group-hover:scale-110 transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)]" />
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-[#F5EEE6] transform transition-transform duration-[1000ms] ease-out group-hover:-translate-y-3">
                  <h3 className="font-heading text-3xl md:text-3xl lg:text-4xl font-bold tracking-tight drop-shadow-xl text-center px-4">Lifting Facial</h3>
                  <p className="mt-2 text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] font-semibold tracking-[0.2em] uppercase delay-100">Deep Plane • Videoendoscopia</p>
@@ -133,9 +134,9 @@ export default function Home() {
             </a>
 
             {/* Pill 3: Corpo */}
-            <a href="#corpo" className="group relative h-64 md:h-[400px] rounded-[3rem] overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl block bg-card">
+            <a href="/corpo" className="group relative h-64 md:h-[400px] rounded-[3rem] overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl block bg-card">
               <div className="absolute inset-0 bg-[#5A3E2B]/70 group-hover:bg-[#5A3E2B]/30 transition-colors z-10 duration-[1500ms]"></div>
-               <Image src="/assets/b4772728-a888-4aee-a312-2c9c2e7b3ba1.jpg" fill alt="Corpo" className="object-cover object-bottom transform group-hover:scale-110 transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)]" />
+               <Image src="/assets/IMG_4279.JPG" fill alt="Corpo" className="object-cover object-bottom transform group-hover:scale-110 transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)]" />
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-[#F5EEE6] transform transition-transform duration-[1000ms] ease-out group-hover:-translate-y-3">
                  <h3 className="font-heading text-3xl md:text-3xl lg:text-4xl font-bold tracking-tight drop-shadow-xl text-center px-4">Contorno Corporal</h3>
                  <p className="mt-2 text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] font-semibold tracking-[0.2em] uppercase delay-100">Lipo HD • Abdômen</p>
@@ -169,7 +170,7 @@ export default function Home() {
           <FadeIn className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center group cursor-default">
             <div className="relative h-[400px] md:h-[650px] w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-secondary/20">
                <Image 
-                src="/assets/IMG_4279.JPG" 
+                src="/assets/IMG_4281.JPG" 
                 alt="Cirurgia das Mamas" 
                 fill 
                 className="object-cover object-center transform transition-transform duration-[4000ms] group-hover:scale-110 ease-[cubic-bezier(0.16,1,0.3,1)]"
@@ -222,7 +223,7 @@ export default function Home() {
 
             <div className="relative h-[400px] md:h-[650px] w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-secondary/20 lg:order-2 order-1">
                <Image 
-                src="/assets/facial_rejuvenation.png" 
+                src="/assets/novo_facial.png" 
                 alt="Face" 
                 fill 
                 className="object-cover object-center transform transition-transform duration-[4000ms] group-hover:scale-110 ease-[cubic-bezier(0.16,1,0.3,1)]"
@@ -237,7 +238,7 @@ export default function Home() {
             
             <div className="relative h-[400px] md:h-[650px] w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-secondary/20">
                <Image 
-                src="/assets/IMG_4281.JPG" 
+                src="/assets/IMG_4279.JPG" 
                 alt="Contorno Corporal" 
                 fill 
                 className="object-cover object-center transform transition-transform duration-[4000ms] group-hover:scale-110 ease-[cubic-bezier(0.16,1,0.3,1)]"
@@ -378,7 +379,7 @@ export default function Home() {
                      {[1,2,3,4,5].map((i) => <Star key={i} className={`w-5 h-5 md:w-6 md:h-6 fill-current transition-all duration-[800ms] ease-[cubic-bezier(0.175,0.885,0.32,1.275)] group-hover:rotate-[360deg] group-hover:scale-125 group-hover:text-amber-500`} style={{ transitionDelay: `${i * 70}ms` }} />)}
                    </div>
                    <h3 className="font-heading text-lg md:text-xl italic text-foreground mb-8 leading-relaxed font-semibold">
-                     "O conceito R24R é real! Em poucos dias eu já estava retomando minha vida com zero dor. O cuidado da clínica em Sorriso é formidável."
+                     "O conceito R24R é real! Em poucos dias eu já estava retomando minha vida com zero dor. O cuidado da clínica em Cuiabá é formidável."
                    </h3>
                    <div className="pt-6 border-t border-border mt-auto">
                      <p className="text-sm uppercase tracking-widest text-primary font-bold">Camila T.</p>
@@ -466,38 +467,12 @@ export default function Home() {
           </FadeIn>
         </section>
 
-        {/* FAQ - NATIVE HTML (Zero JS Overhead) */}
-        <section className="py-24 bg-card">
-          <FadeIn className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-16">
-              <span className="text-primary font-bold text-xs tracking-[0.2em] uppercase">Tire suas dúvidas</span>
-              <h2 className="font-heading text-4xl lg:text-5xl mt-2 tracking-tight text-foreground">
-                Perguntas Frequentes
-              </h2>
-            </div>
-            
-            <div className="space-y-4">
-              {[
-                {q: "Como funciona a avaliação com o Dr. Márcio?", a: "A avaliação é o momento mais importante. É nela que avaliamos se o seu biotipo tem indicação para a técnica desejada, alinhando suas expectativas à realidade cirúrgica segura e solicitando exames minuciosos de rastreamento de saúde."},
-                {q: "O que é a técnica R24R na cirurgia das mamas?", a: "A técnica R24R (Recuperação em 24 Horas) é um protocolo rígido intraoperatório empregado com o objetivo de reduzir sangramentos e propiciar que você levante os braços e recupere a funcionalidade motora já no dia da cirurgia, trazendo mais independência."},
-                {q: "Existe idade ideal para o Facelift Deep Plane?", a: "Habitualmente recomendado para pacientes entre 45 e 70 anos. Contudo, não focamos puramente em idade biológica, mas na flacidez profunda dos tecidos. O grande diferencial desta cirurgia é não puxar a pele, mas sim o SMAS (músculo subjacente), garantindo ausência de estigmas."},
-                {q: "Posso aliar cirurgia facial ao Morpheus?", a: "Sim. Nossos protocolos costumam convergir o Lifting cirúrgico para tração muscular junto à tecnologia Morpheus para tratamento da superfície e derme profunda, maximizando a produção de colágeno e a textura visual da pele."},
-              ].map((item, i) => (
-                <details key={i} className="group border border-border bg-background rounded-3xl p-6 shadow-sm [&_summary::-webkit-details-marker]:hidden cursor-pointer">
-                  <summary className="flex items-center justify-between font-heading text-lg font-bold outline-none text-foreground">
-                    {item.q}
-                    <span className="transition-transform group-open:rotate-180 flex shrink-0 justify-center items-center w-8 h-8 rounded-full bg-primary/10 text-primary">
-                      <ChevronRight className="w-5 h-5 rotate-90" />
-                    </span>
-                  </summary>
-                  <p className="text-foreground/70 mt-4 leading-relaxed pl-2 text-sm border-l-2 border-primary/20">
-                    {item.a}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </FadeIn>
-        </section>
+        <FAQ items={[
+          {q: "Como funciona a avaliação com o Dr. Márcio?", a: "A avaliação é o momento mais importante. É nela que avaliamos se o seu biotipo tem indicação para a técnica desejada, alinhando suas expectativas à realidade cirúrgica segura e solicitando exames minuciosos de rastreamento de saúde."},
+          {q: "O que é a técnica R24R na cirurgia das mamas?", a: "A técnica R24R (Recuperação em 24 Horas) é um protocolo rígido intraoperatório empregado com o objetivo de reduzir sangramentos e propiciar que você levante os braços e recupere a funcionalidade motora já no dia da cirurgia, trazendo mais independência."},
+          {q: "Existe idade ideal para o Facelift Deep Plane?", a: "Habitualmente recomendado para pacientes entre 45 e 70 anos. Contudo, não focamos puramente em idade biológica, mas na flacidez profunda dos tecidos. O grande diferencial desta cirurgia é não puxar a pele, mas sim o SMAS (músculo subjacente), garantindo ausência de estigmas."},
+          {q: "Posso aliar cirurgia facial ao Morpheus?", a: "Sim. Nossos protocolos costumam convergir o Lifting cirúrgico para tração muscular junto à tecnologia Morpheus para tratamento da superfície e derme profunda, maximizando a produção de colágeno e a textura visual da pele."},
+        ]} />
 
         {/* CONTATO & LOCALIZAÇÃO */}
         <section id="contato" className="py-24 bg-background">

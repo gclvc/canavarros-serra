@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { FadeIn } from "@/components/ui/fade-in"
-import { ChevronRight, ShieldCheck, CheckCircle2, Droplet, Sparkles } from "lucide-react"
+import { Reviews } from "@/components/ui/reviews"
+import { FAQ } from "@/components/ui/faq"
+import { ContactForm } from "@/components/ui/contact-form"
 
 export default function FacialPage() {
   return (
@@ -9,7 +11,7 @@ export default function FacialPage() {
       <section className="relative pt-10 pb-28 overflow-hidden min-h-[90dvh] flex items-center bg-[#0D0D12]">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/assets/facial_rejuvenation.png" 
+            src="/assets/novo_facial.png" 
             alt="Cirurgia Facial" 
             fill 
             className="object-cover object-center opacity-30 mix-blend-screen duration-[10000ms] animate-out zoom-in fill-mode-forwards grayscale hover:grayscale-0 transition-all"
@@ -32,8 +34,8 @@ export default function FacialPage() {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-6">
-              <a href="https://wa.me/5565996236875?text=Ol%C3%A1%2C%20Dr.%20M%C3%A1rcio!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20especializada%20para%20Lifting%20Facial%20(Face)." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-sm transition-all rounded-full text-base px-10 bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/40 h-16 hover:scale-105 font-bold">
-                Agendar Avaliação Facial
+              <a href="#contato" className="inline-flex items-center justify-center text-sm transition-all rounded-full text-base px-10 bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/40 h-16 hover:scale-105 font-bold">
+                Agendar Avaliação
               </a>
             </div>
           </FadeIn>
@@ -45,7 +47,7 @@ export default function FacialPage() {
         <FadeIn className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center group cursor-default">
           <div className="relative h-[600px] md:h-[800px] w-full rounded-[3rem] overflow-hidden shadow-2xl border border-secondary/20">
              <Image 
-              src="/assets/facial_rejuvenation.png" 
+              src="/assets/novo_facial.png" 
               alt="Deep Plane Face" 
               fill 
               className="object-cover object-[center_30%] transform transition-transform duration-[4000ms] group-hover:scale-110 ease-[cubic-bezier(0.16,1,0.3,1)]"
@@ -118,6 +120,35 @@ export default function FacialPage() {
                   </ul>
                </div>
              </div>
+          </FadeIn>
+      </section>
+
+      <FAQ items={[
+        {q: "O que torna o Deep Plane diferente do Facelift tradicional?", a: "Diferente do método tradicional que estica a pele, o Deep Plane atua abaixo da musculatura, reposicionando os tecidos estruturais originais. O resultado é incomparavelmente mais natural."},
+        {q: "As cicatrizes do Facelift ficam aparentes?", a: "Nossas incisões são planejadas meticulosamente ao redor da curvatura da orelha e na linha do cabelo, tornando-se praticamente imperceptíveis após o período de maturação anatômica."},
+        {q: "Quanto tempo dura a recuperação?", a: "Apesar de ser uma cirurgia profunda, a técnica Deep Plane costuma causar menos hematomas. A maioria de nossos pacientes retorna às atividades sociais em cerca de 15 a 20 dias."},
+        {q: "O que é o efeito Ponytail?", a: "É o efeito de elevação sutil e elegante do terço superior do rosto obtido por videoendoscopia, que reproduz a sensação estética jovial de estar com os cabelos amarrados."}
+      ]} />
+
+      <Reviews category="facial" />
+
+      <section id="contato" className="py-16 md:py-24 bg-card border-t border-border">
+          <FadeIn className="container mx-auto px-4 max-w-4xl">
+            <div className="bg-background rounded-[3rem] p-8 md:p-14 shadow-2xl border border-primary/20 relative overflow-hidden">
+               <div className="absolute inset-0 bg-primary/5"></div>
+               <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+              
+              <div className="relative z-10">
+                <div className="text-center mb-10">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-4">
+                    <Sparkles className="w-3 h-3" /> Avaliação Privê
+                  </span>
+                  <h3 className="font-heading text-3xl md:text-4xl mb-4">Dê o Próximo Passo</h3>
+                  <p className="text-foreground/70 mb-6">A sua beleza com a naturalidade que você merece. Fale com nossa equipe.</p>
+                </div>
+                <ContactForm />
+              </div>
+            </div>
           </FadeIn>
       </section>
     </main>

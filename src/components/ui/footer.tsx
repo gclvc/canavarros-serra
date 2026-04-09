@@ -63,12 +63,12 @@ export function Footer() {
           <p className="opacity-70 font-bold uppercase tracking-wider mb-6 text-xs text-primary">Atendimento</p>
           <ul className="space-y-4 opacity-80">
             <li>
-              <a href="https://wa.me/5565996236875" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors cursor-pointer flex items-center">
+              <a href="#contato" className="hover:text-primary transition-colors cursor-pointer flex items-center">
                 <Phone className="w-4 h-4 mr-3 text-primary" /> (65) 99623-6875
               </a>
             </li>
             <li className="pt-4">
-               <a href="https://wa.me/5565996236875" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-xs transition-all rounded-full bg-primary/20 hover:bg-primary text-primary hover:text-primary-foreground font-semibold px-6 h-10 border border-primary/50 text-center w-full">
+               <a href="#contato" className="inline-flex items-center justify-center text-xs transition-all rounded-full bg-primary/20 hover:bg-primary text-primary hover:text-primary-foreground font-semibold px-6 h-10 border border-primary/50 text-center w-full">
                   Agendar por WhatsApp
                </a>
             </li>
