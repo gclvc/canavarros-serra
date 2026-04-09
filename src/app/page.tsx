@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/ui/fade-in"
 import { ContactForm } from "@/components/ui/contact-form"
-import { Phone, Star, ShieldCheck, HeartPulse, ChevronRight, CheckCircle2 } from "lucide-react"
+import { Phone, Star, ShieldCheck, HeartPulse, ChevronRight, CheckCircle2, Sparkles } from "lucide-react"
 
 export default function Home() {
   return (
@@ -49,41 +49,49 @@ export default function Home() {
         {/* ROW: DIFERENCIAIS */}
         <section className="py-20 bg-card">
           <FadeIn className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-border/50">
+            <div className="grid md:grid-cols-4 gap-8 lg:gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-border/50">
               
               {/* Div 1 */}
-              <div className="group flex flex-col items-center space-y-5 px-6 pt-8 md:pt-0 transform transition-all duration-[600ms] hover:-translate-y-2 cursor-pointer">
+              <div className="group flex flex-col items-center space-y-5 px-4 lg:px-6 pt-8 md:pt-0 transform transition-all duration-[600ms] hover:-translate-y-2 cursor-pointer">
                 <div className="w-16 h-16 rounded-full bg-background flex items-center justify-center text-primary shadow-sm border border-border transition-all duration-[800ms] group-hover:scale-110 group-hover:shadow-xl group-hover:bg-primary/5">
                   <ShieldCheck className="w-8 h-8 transition-transform duration-[800ms] group-hover:rotate-[360deg] group-hover:text-amber-500" />
                 </div>
-                <h3 className="font-heading text-2xl font-semibold text-foreground transition-colors group-hover:text-primary">Técnica R24R</h3>
-                <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-                  Recuperação rápida e segura para próteses de mama, 
-                  focada no conforto e retorno precoce à rotina.
+                <h3 className="font-heading text-xl lg:text-2xl font-semibold text-foreground transition-colors group-hover:text-primary">Técnica R24R</h3>
+                <p className="text-muted-foreground text-xs lg:text-sm max-w-[250px] leading-relaxed">
+                  Recuperação rápida e segura para próteses de mama, focada no conforto e retorno precoce.
                 </p>
               </div>
 
               {/* Div 2 */}
-              <div className="group flex flex-col items-center space-y-5 px-6 pt-8 md:pt-0 transform transition-all duration-[600ms] hover:-translate-y-2 cursor-pointer md:delay-100">
+              <div className="group flex flex-col items-center space-y-5 px-4 lg:px-6 pt-8 md:pt-0 transform transition-all duration-[600ms] hover:-translate-y-2 cursor-pointer md:delay-100">
                 <div className="w-16 h-16 rounded-full bg-background flex items-center justify-center text-primary shadow-sm border border-border transition-all duration-[800ms] group-hover:scale-110 group-hover:shadow-xl group-hover:bg-primary/5">
                   <Star className="w-8 h-8 transition-transform duration-[800ms] group-hover:rotate-[180deg] group-hover:text-amber-500" />
                 </div>
-                <h3 className="font-heading text-2xl font-semibold text-foreground transition-colors group-hover:text-primary">Facelifting Deep Plane</h3>
-                <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-                  Rejuvenescimento avançado e natural. Atua nas
-                  estruturas profundas da face, promovendo alta durabilidade.
+                <h3 className="font-heading text-xl lg:text-2xl font-semibold text-foreground transition-colors group-hover:text-primary">Facelift Deep Plane</h3>
+                <p className="text-muted-foreground text-xs lg:text-sm max-w-[250px] leading-relaxed">
+                  Rejuvenescimento natural em estruturas profundas, eliminando a tensão e estigmas da face.
                 </p>
               </div>
 
               {/* Div 3 */}
-              <div className="group flex flex-col items-center space-y-5 px-6 pt-8 md:pt-0 transform transition-all duration-[600ms] hover:-translate-y-2 cursor-pointer md:delay-200">
+              <div className="group flex flex-col items-center space-y-5 px-4 lg:px-6 pt-8 md:pt-0 transform transition-all duration-[600ms] hover:-translate-y-2 cursor-pointer md:delay-200">
                 <div className="w-16 h-16 rounded-full bg-background flex items-center justify-center text-primary shadow-sm border border-border transition-all duration-[800ms] group-hover:scale-110 group-hover:shadow-xl group-hover:bg-primary/5">
                   <HeartPulse className="w-8 h-8 transition-transform duration-[800ms] group-hover:scale-125 group-hover:text-[#CC5833]" />
                 </div>
-                <h3 className="font-heading text-2xl font-semibold text-foreground transition-colors group-hover:text-[#CC5833]">Tradição & Acolhimento</h3>
-                <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-                  Legado de gerações na medicina. Unimos o cuidado ético 
-                  rigoroso a um atendimento premium e sensível.
+                <h3 className="font-heading text-xl lg:text-2xl font-semibold text-foreground transition-colors group-hover:text-[#CC5833]">Acolhimento</h3>
+                <p className="text-muted-foreground text-xs lg:text-sm max-w-[250px] leading-relaxed">
+                  Legado de gerações na medicina. Unimos o cuidado ético a um atendimento premium e sensível.
+                </p>
+              </div>
+
+              {/* Div 4 */}
+              <div className="group flex flex-col items-center space-y-5 px-4 lg:px-6 pt-8 md:pt-0 transform transition-all duration-[600ms] hover:-translate-y-2 cursor-pointer md:delay-300">
+                <div className="w-16 h-16 rounded-full bg-background flex items-center justify-center text-primary shadow-sm border border-border transition-all duration-[800ms] group-hover:scale-110 group-hover:shadow-xl group-hover:bg-primary/5">
+                  <Sparkles className="w-8 h-8 transition-transform duration-[800ms] group-hover:scale-125 group-hover:text-[#D1B48C]" />
+                </div>
+                <h3 className="font-heading text-xl lg:text-2xl font-semibold text-foreground transition-colors group-hover:text-[#D1B48C]">Cosmiatria</h3>
+                <p className="text-muted-foreground text-xs lg:text-sm max-w-[250px] leading-relaxed">
+                  Tecnologia e injetáveis para prevenir o envelhecimento e potencializar resultados naturais.
                 </p>
               </div>
 
@@ -93,14 +101,14 @@ export default function Home() {
 
         {/* FAST TRACKS - AESTHETIC SOFT CURVES V2 */}
         <section className="py-24 bg-background">
-          <FadeIn className="container mx-auto px-4 grid md:grid-cols-3 gap-8 max-w-[1200px]">
+          <FadeIn className="container mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1400px]">
             {/* Pill 1: Mamas */}
             <a href="/mama" className="group relative h-64 md:h-[400px] rounded-[3rem] overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl block bg-card">
               <div className="absolute inset-0 bg-[#5A3E2B]/50 mix-blend-multiply transition-colors group-hover:bg-[#5A3E2B]/10 z-10 duration-[1500ms]"></div>
               <Image src="/assets/IMG_4279.JPG" fill alt="Mamas" className="object-cover transform group-hover:scale-110 transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)]" />
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-[#F5EEE6] transform transition-transform duration-[1000ms] ease-out group-hover:-translate-y-3">
                  <h3 className="font-heading text-3xl md:text-3xl lg:text-4xl font-bold tracking-tight drop-shadow-xl text-center px-4">Cirurgia das Mamas</h3>
-                 <p className="mt-2 text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] font-semibold tracking-[0.2em] uppercase delay-100">R24R • Mastopexia</p>
+                 <p className="mt-2 text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] font-semibold tracking-[0.2em] uppercase delay-100">R24R • Mastopexia/Redutora</p>
                  <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] delay-200">
                     <span className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
                       <ChevronRight className="w-5 h-5" />
@@ -115,7 +123,7 @@ export default function Home() {
                <Image src="/assets/IMG_4281.JPG" fill alt="Face" className="object-cover transform group-hover:scale-110 transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)]" />
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-[#F5EEE6] transform transition-transform duration-[1000ms] ease-out group-hover:-translate-y-3">
                  <h3 className="font-heading text-3xl md:text-3xl lg:text-4xl font-bold tracking-tight drop-shadow-xl text-center px-4">Lifting Facial</h3>
-                 <p className="mt-2 text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] font-semibold tracking-[0.2em] uppercase delay-100">Deep Plane • Pálpebras</p>
+                 <p className="mt-2 text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] font-semibold tracking-[0.2em] uppercase delay-100">Deep Plane • Videoendoscopia</p>
                  <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] delay-200">
                     <span className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
                       <ChevronRight className="w-5 h-5" />
@@ -131,6 +139,21 @@ export default function Home() {
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-[#F5EEE6] transform transition-transform duration-[1000ms] ease-out group-hover:-translate-y-3">
                  <h3 className="font-heading text-3xl md:text-3xl lg:text-4xl font-bold tracking-tight drop-shadow-xl text-center px-4">Contorno Corporal</h3>
                  <p className="mt-2 text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] font-semibold tracking-[0.2em] uppercase delay-100">Lipo HD • Abdômen</p>
+                 <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] delay-200">
+                    <span className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                      <ChevronRight className="w-5 h-5" />
+                    </span>
+                 </div>
+              </div>
+            </a>
+
+            {/* Pill 4: Cosmiatria */}
+            <a href="/estetica" className="group relative h-64 md:h-[400px] rounded-[3rem] overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl block bg-card">
+              <div className="absolute inset-0 bg-[#D1B48C]/70 mix-blend-multiply group-hover:bg-[#D1B48C]/30 transition-colors z-10 duration-[1500ms]"></div>
+               <Image src="/assets/facial_rejuvenation.png" fill alt="Cosmiatria Avançada" className="object-cover object-[center_30%] transform group-hover:scale-110 transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)] grayscale opacity-80" />
+              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-[#F5EEE6] transform transition-transform duration-[1000ms] ease-out group-hover:-translate-y-3">
+                 <h3 className="font-heading text-3xl md:text-3xl lg:text-4xl font-bold tracking-tight drop-shadow-xl text-center px-4">Cosmiatria</h3>
+                 <p className="mt-2 text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] font-semibold tracking-[0.2em] uppercase delay-100">Botox • Morpheus</p>
                  <div className="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-[600ms] delay-200">
                     <span className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
                       <ChevronRight className="w-5 h-5" />
@@ -159,13 +182,12 @@ export default function Home() {
               </h2>
               <div className="space-y-5 text-foreground/80 leading-relaxed text-lg">
                 <p>
-                  As mamas são símbolo central da feminilidade. Na Canavarros Serra, abordamos a mamoplastia 
-                  de aumento, mastopexia e redução com as técnicas mais seguras e modernas do mundo, notavelmente a <strong>Técnica R24R</strong>.
+                  Na Canavarros Serra, abordamos a mamoplastia com as técnicas mais seguras e modernas do mundo (<strong>Técnica R24R</strong> em mais de 14 passos). Oferecemos <strong>Mastopexia com prótese (alça muscular)</strong>, <strong>Mastopexia sem prótese (prótese natural com a própria glândula)</strong> e a cirurgia de <strong>Mama redutora</strong> focada em alívio de peso e volume.
                 </p>
                 <ul className="space-y-4 pt-4 border-t border-border/50">
-                  <li className="flex items-start transform transition-all duration-500 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#5A3E2B] shrink-0 mt-0.5 transition-transform duration-700 group-hover:rotate-[360deg]" /> <p><strong>Recuperação Ultrarrápida:</strong> Movimentação de braços na mesma semana da cirurgia.</p></li>
-                  <li className="flex items-start transform transition-all duration-500 delay-[50ms] group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#5A3E2B] shrink-0 mt-0.5 transition-transform duration-700 delay-[50ms] group-hover:rotate-[360deg]" /> <p><strong>Sutiã Interno Multicamadas:</strong> Maior estabilidade dos tecidos garantindo um colo exuberante a longo prazo.</p></li>
-                  <li className="flex items-start transform transition-all duration-500 delay-100 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#5A3E2B] shrink-0 mt-0.5 transition-transform duration-700 delay-100 group-hover:rotate-[360deg]" /> <p><strong>Segurança Elevada:</strong> Prevenção do afinamento de tecidos e mapeamento digital anatômico.</p></li>
+                  <li className="flex items-start transform transition-all duration-500 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#5A3E2B] shrink-0 mt-0.5 transition-transform duration-700 group-hover:rotate-[360deg]" /> <p><strong>Recuperação Ultrarrápida (R24R):</strong> Protocolo rígido para movimentação de braços na mesma semana da cirurgia.</p></li>
+                  <li className="flex items-start transform transition-all duration-500 delay-[50ms] group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#5A3E2B] shrink-0 mt-0.5 transition-transform duration-700 delay-[50ms] group-hover:rotate-[360deg]" /> <p><strong>Sutiã Interno (Grip Plane):</strong> Estrutura fundamental para ancorar o sulco mamário impedindo que a prótese desça com o tempo.</p></li>
+                  <li className="flex items-start transform transition-all duration-500 delay-100 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#5A3E2B] shrink-0 mt-0.5 transition-transform duration-700 delay-100 group-hover:rotate-[360deg]" /> <p><strong>Dual Plane:</strong> Utilização da tecnologia e dissecção submuscular para esconder totalmente a prótese e prevenir seu afinamento.</p></li>
                 </ul>
               </div>
               <a href="#contato" className="inline-flex items-center justify-center text-sm transition-all rounded-full mt-6 bg-primary hover:bg-primary/90 hover:-translate-y-1 hover:shadow-xl shadow-md h-14 px-8 text-base group/btn">
@@ -185,13 +207,12 @@ export default function Home() {
               </h2>
               <div className="space-y-5 text-foreground/80 leading-relaxed text-lg">
                 <p>
-                  A beleza facial atemporal não deve parecer "operada". Nosso foco é reposicionar 
-                  tecidos aos seus lugares de origem, resgatando a fisionomia jovial da paciente sem distorções estigmatizantes.
+                  A beleza facial atemporal é marcada pela elegância de não parecer operada. O nosso foco é resgatar a juventude com durabilidade e identidade preservada, fugindo completamente do estigma de "rosto esticado" ou efeito "vento no rosto".
                 </p>
                 <ul className="space-y-4 pt-4 border-t border-border/50">
-                  <li className="flex items-start transform transition-all duration-500 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#3d2c20] shrink-0 mt-0.5 transition-transform duration-700 group-hover:rotate-[360deg]" /> <p><strong>Facelifting Deep Plane:</strong> Rejuvenescimento tridimensional profundo com ausência de tensão na pele.</p></li>
-                  <li className="flex items-start transform transition-all duration-500 delay-[50ms] group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#3d2c20] shrink-0 mt-0.5 transition-transform duration-700 delay-[50ms] group-hover:rotate-[360deg]" /> <p><strong>Blefaroplastia Premium:</strong> Cirurgia das pálpebras com refinamento milimétrico para um olhar vibrante e sem olhar caído.</p></li>
-                  <li className="flex items-start transform transition-all duration-500 delay-100 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#3d2c20] shrink-0 mt-0.5 transition-transform duration-700 delay-100 group-hover:rotate-[360deg]" /> <p><strong>Lipotransferência Estrutural:</strong> Uso do próprio tecido do paciente para restabelecer os volumes de juventude.</p></li>
+                  <li className="flex items-start transform transition-all duration-500 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#3d2c20] shrink-0 mt-0.5 transition-transform duration-700 group-hover:rotate-[360deg]" /> <p><strong>Facelift Deep Plane:</strong> Atua profundamente nas estruturas ligamentares, liberando a musculatura subjacente e a pele (reposicionando a verdadeira fundação do rosto).</p></li>
+                  <li className="flex items-start transform transition-all duration-500 delay-[50ms] group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#3d2c20] shrink-0 mt-0.5 transition-transform duration-700 delay-[50ms] group-hover:rotate-[360deg]" /> <p><strong>Lift de Sobrancelha por Vídeo:</strong> Videoendoscopia avançada através de furos mínimos no couro cabeludo trazendo o desejado efeito "ponytail" sem cicatriz perceptível.</p></li>
+                  <li className="flex items-start transform transition-all duration-500 delay-100 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-[#3d2c20] shrink-0 mt-0.5 transition-transform duration-700 delay-100 group-hover:rotate-[360deg]" /> <p><strong>Medicina Regenerativa:</strong> Lipoenxertia associada (células-tronco, Nanofat e Microfat) para melhora substancial do volume perdido e da textura e vitalidade cutânea.</p></li>
                 </ul>
               </div>
               <a href="/facial" className="inline-flex items-center justify-center text-sm transition-all rounded-full mt-6 bg-[#3d2c20] hover:bg-[#3d2c20]/90 text-white shadow-md h-14 px-8 text-base hover:-translate-y-1 hover:shadow-xl group/btn">
@@ -230,12 +251,12 @@ export default function Home() {
               <div className="space-y-5 text-foreground/80 leading-relaxed text-lg">
                 <p>
                   A arte de esculpir o corpo exige uma compressão estrutural impecável. Nossa abordagem visa 
-                  a simetria, a definição elegante e a segurança através de protocolos de lipoaspiração avançada.
+                  a simetria, a definição elegante e a segurança através de protocolos de lipoaspiração avançada de classe internacional.
                 </p>
                 <ul className="space-y-4 pt-4 border-t border-border/50">
-                  <li className="flex items-start transform transition-all duration-500 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-amber-700 shrink-0 mt-0.5 transition-transform duration-700 group-hover:rotate-[360deg]" /> <p><strong>Lipo HD e Lipoescultura:</strong> Definição precisa aliada à lipoenxertia glútea, devolvendo a curva sinuosa do corpo.</p></li>
-                  <li className="flex items-start transform transition-all duration-500 delay-[50ms] group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-amber-700 shrink-0 mt-0.5 transition-transform duration-700 delay-[50ms] group-hover:rotate-[360deg]" /> <p><strong>Abdominoplastia em Âncora:</strong> Reconstrução da parede abdominal preservando a elegância e afinando a silhueta.</p></li>
-                  <li className="flex items-start transform transition-all duration-500 delay-100 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-amber-700 shrink-0 mt-0.5 transition-transform duration-700 delay-100 group-hover:rotate-[360deg]" /> <p><strong>Integração Morpheus Body:</strong> Terapia dupla com radiofrequência interna simultânea, acelerando e maximizando a retração de pele da lipo.</p></li>
+                  <li className="flex items-start transform transition-all duration-500 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-amber-700 shrink-0 mt-0.5 transition-transform duration-700 group-hover:rotate-[360deg]" /> <p><strong>Vaser & Vibrolipo:</strong> Aparelho de ressonância de alta frequência para derreter gordura, com a dinâmica da cânula vibratória para reduzir dor e sangramento.</p></li>
+                  <li className="flex items-start transform transition-all duration-500 delay-[50ms] group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-amber-700 shrink-0 mt-0.5 transition-transform duration-700 delay-[50ms] group-hover:rotate-[360deg]" /> <p><strong>Tecnologia de Retração:</strong> Integração minuciosa com BodyTite e Morpheus Body (e FaceTite para precisão do pescoço) visando colagem máxima da pele.</p></li>
+                  <li className="flex items-start transform transition-all duration-500 delay-100 group-hover:translate-x-2"><CheckCircle2 className="w-6 h-6 mr-3 text-amber-700 shrink-0 mt-0.5 transition-transform duration-700 delay-100 group-hover:rotate-[360deg]" /> <p><strong>Contorno Glúteo:</strong> Lipoescultura completa e enxerto de gordura no bumbum para curvar a silhueta em completa harmonia com as proporções.</p></li>
                 </ul>
               </div>
               <a href="#contato" className="inline-flex items-center justify-center text-sm transition-all rounded-full mt-6 bg-amber-700 hover:bg-amber-800 shadow-md h-14 px-8 text-base text-primary-foreground hover:-translate-y-1 hover:shadow-xl group/btn">
@@ -254,24 +275,26 @@ export default function Home() {
                 Cosmiatria Avançada
              </h2>
              
-             <div className="grid md:grid-cols-3 gap-8 text-left">
-               <div className="bg-background/5 border border-white/10 rounded-[2rem] p-10 hover:bg-background/10 transition-colors">
-                  <h3 className="font-heading text-2xl font-semibold mb-4 text-[#D1B48C]">Morpheus Face & Body</h3>
-                  <p className="opacity-90 text-sm leading-relaxed text-[#F5EEE6]">
-                    Radiofrequência microagulhada definitiva para tratar flacidez, estimular colágeno massivo e redesenhar o contorno facial e corporal sem tempo de inatividade prolongado.
-                  </p>
+             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+               <div className="bg-background/5 border border-white/10 rounded-[2rem] p-8 hover:bg-background/10 transition-colors">
+                  <h3 className="font-heading text-2xl lg:text-3xl font-bold mb-2 text-[#D1B48C]">Morpheus</h3>
+                  <span className="text-[#D1B48C]/70 text-[10px] uppercase tracking-widest block mb-4 border-b border-white/10 pb-2">Reconstrução Avançada</span>
+                  <p className="opacity-90 text-sm leading-relaxed text-[#F5EEE6]">Radiofrequência microagulhada definitiva para tratar flacidez profunda e estimular colágeno massivo do contorno corporal e facial.</p>
                </div>
-               <div className="bg-background/5 border border-white/10 rounded-[2rem] p-10 hover:bg-background/10 transition-colors">
-                  <h3 className="font-heading text-2xl font-semibold mb-4 text-[#D1B48C]">Retração de Pele a Laser</h3>
-                  <p className="opacity-90 text-sm leading-relaxed text-[#F5EEE6]">
-                    Plataformas avançadas de retração pontual e ablação fracionada que renovam superficial e profundamente toda a trama cutânea com extrema precisão e segurança.
-                  </p>
+               <div className="bg-background/5 border border-white/10 rounded-[2rem] p-8 hover:bg-background/10 transition-colors">
+                  <h3 className="font-heading text-2xl lg:text-3xl font-bold mb-2 text-[#D1B48C]">Botox</h3>
+                  <span className="text-[#D1B48C]/70 text-[10px] uppercase tracking-widest block mb-4 border-b border-white/10 pb-2">Toxina Botulínica</span>
+                  <p className="opacity-90 text-sm leading-relaxed text-[#F5EEE6]">Cuidado de prevenção muscular. Diminuição pontual da contratilidade, prevenindo expressivamente os vincos e rugas fixas da face.</p>
                </div>
-                 <div className="bg-background/5 border border-white/10 rounded-[2rem] p-10 hover:bg-background/10 transition-colors">
-                  <h3 className="font-heading text-2xl font-semibold mb-4 text-[#D1B48C]">Arquitetura Injetável</h3>
-                  <p className="opacity-90 text-sm leading-relaxed text-[#F5EEE6]">
-                    Reposição estrutural de volumes perdidos com ácido hialurônico e bioestimuladores de longa duração, seguindo os princípios de embelezamento dos MD Codes™.
-                  </p>
+               <div className="bg-background/5 border border-white/10 rounded-[2rem] p-8 hover:bg-background/10 transition-colors">
+                  <h3 className="font-heading text-2xl lg:text-3xl font-bold mb-2 text-[#D1B48C]">Bioestimulador</h3>
+                  <span className="text-[#D1B48C]/70 text-[10px] uppercase tracking-widest block mb-4 border-b border-white/10 pb-2">Reposição (Radiesse / Sculptra)</span>
+                  <p className="opacity-90 text-sm leading-relaxed text-[#F5EEE6]">Reposição volumétrica precisa e harmonizada com a poderosa estimulação progressiva do seu prório colágeno biológico.</p>
+               </div>
+               <div className="bg-background/5 border border-white/10 rounded-[2rem] p-8 hover:bg-background/10 transition-colors">
+                  <h3 className="font-heading text-2xl lg:text-3xl font-bold mb-2 text-[#D1B48C]">Peeling TCA</h3>
+                  <span className="text-[#D1B48C]/70 text-[10px] uppercase tracking-widest block mb-4 border-b border-white/10 pb-2">Renovação Celular Integral</span>
+                  <p className="opacity-90 text-sm leading-relaxed text-[#F5EEE6]">Ácido Ticloroacético: química controlada de ablação para uniformizar profundamente o tônus, cicatrizes e textura do envelhecimento.</p>
                </div>
              </div>
              
@@ -412,21 +435,16 @@ export default function Home() {
                 </h2>
                 <h4 className="text-xl text-primary font-medium tracking-wide">
                   Dr. Márcio Augusto M. Canavarros Serra <br/> 
-                  <span className="text-sm opacity-80 font-sans tracking-normal font-normal">CRM MT 6323 | RQE 3727</span>
+                  <span className="text-sm opacity-80 font-sans tracking-normal font-normal">CRM MT 10522 | RQE 4879</span>
                 </h4>
               </div>
               
               <div className="space-y-5 text-foreground/80 leading-relaxed text-lg">
                 <p>
-                  A <strong>Canavarros Serra Cirurgia Plástica</strong> representa a continuidade de uma 
-                  sólida tradição familiar dedicada à medicina. Trazemos em nossa essência 
-                  o compromisso ético de guiar pacientes rumo ao bem-estar e da autoestima com 
-                  máxima segurança e precisão técnica.
+                  A <strong>Canavarros Serra Cirurgia Plástica</strong> representa uma robusta tradição familiar, sendo pilar do fomento à medicina no Mato Grosso através de sucessivas gerações cirúrgicas de máxima exigência.
                 </p>
                 <p>
-                  Membro ativo de renomadas sociedades internacionais de cirurgia, com extenso background de estudos de caso. 
-                  Somos especializados nas técnicas cirúrgicas estéticas de alto padrão,
-                  englobando o contorno corporal contemporâneo (incluindo avanços híbridos da R24R) e o rejuvenescimento profundo do terço cérvico-facial (Facelifting Deep Plane).
+                  O foco está em oferecer resultados absolutos e confiáveis em cirurgias de <strong>Facelift Deep Plane</strong> e <strong>Contorno Corporal Extremo</strong>, atestado pela afiliação das mais renomadas instituições de excelência de toda a medicina plástica moderna: a <strong>Sociedade Brasileira de Cirurgia Plástica (SBCP)</strong>, a internacional <strong>Sociedade Americana de Cirurgiões Plásticos (ASPS)</strong> e também o aclamado <strong>Colégio Brasileiro de Cirurgiões (CBC)</strong>.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mt-6 border-t border-border/50 pt-6">
                   <div>

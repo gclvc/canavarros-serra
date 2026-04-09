@@ -92,7 +92,7 @@ export default function EsteticaPage() {
                   </p>
                   <ul className="space-y-4 mb-8 border-t border-border/50 pt-6">
                     <li className="flex items-start"><CheckCircle2 className="w-5 h-5 mr-3 text-primary shrink-0 mt-0.5" /> <p className="text-sm"><strong>Botox Preventivo:</strong> Relaxamento muscular precoce.</p></li>
-                    <li className="flex items-start"><CheckCircle2 className="w-5 h-5 mr-3 text-primary shrink-0 mt-0.5" /> <p className="text-sm"><strong>Protocolo Glow Skin:</strong> Microagulhamento + Drug Delivery.</p></li>
+                    <li className="flex items-start"><CheckCircle2 className="w-5 h-5 mr-3 text-primary shrink-0 mt-0.5" /> <p className="text-sm"><strong>Peeling TCA:</strong> Renovação celular e ablação progressiva.</p></li>
                     <li className="flex items-start"><CheckCircle2 className="w-5 h-5 mr-3 text-primary shrink-0 mt-0.5" /> <p className="text-sm"><strong>Skincare Médico:</strong> Dermocosméticos de alta performance.</p></li>
                   </ul>
                 </div>

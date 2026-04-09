@@ -21,7 +21,7 @@ export function Footer() {
           </div>
           <div>
             <p className="opacity-90 font-medium pt-2">Dr. Márcio Augusto M. Canavarros Serra</p>
-            <p className="opacity-70 mt-1">CRM MT 6323 | RQE 3727</p>
+            <p className="opacity-70 mt-1">CRM MT 10522 | RQE 4879</p>
           </div>
           <p className="opacity-50 text-[11px] leading-relaxed">
              Aviso ético: As imagens exibidas são meramente ilustrativas. Os resultados variam. A consulta médica presencial é indispensável segundo as diretrizes do CFM.
@@ -34,8 +34,8 @@ export function Footer() {
           <ul className="space-y-6 opacity-80">
             <li>
               <strong className="block mb-1 text-primary">Unidade Cuiabá</strong>
-              <a href="https://www.google.com/maps/search/SB+Medical+Jardim+Mariana+Cuiabá" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors cursor-pointer text-xs block leading-relaxed">
-                Ed. SB Medical, Jardim Mariana<br/>Cuiabá - MT<br/><span className="underline mt-1 inline-block">Ver no Google Maps</span>
+              <a href="https://www.google.com/maps/search/Rua+General+Ramiro+de+Noronha+475+Cuiab%C3%A1" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors cursor-pointer text-xs block leading-relaxed">
+                Rua General Ramiro de Noronha, 475<br/>Jardim Cuiabá - MT<br/><span className="underline mt-1 inline-block">Ver no Google Maps</span>
               </a>
             </li>
             <li>

@@ -59,8 +59,8 @@ export default function MamaPage() {
                 <li className="flex items-start">
                   <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 mr-4 mt-1 font-heading text-xl font-bold">1</span> 
                   <div>
-                    <strong className="block text-foreground mb-1">Mapeamento 3D</strong>
-                    <span className="text-sm">Uso de tecnologias para escolher a prótese exata e o plano anatômico perfeito (dual-plane).</span>
+                    <strong className="block text-foreground mb-1">Recuperação em 24h</strong>
+                    <span className="text-sm">Protocolo rigoroso que permite movimentação restabelecida na mesma semana, gerando muito mais autonomia à paciente.</span>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -73,8 +73,8 @@ export default function MamaPage() {
                  <li className="flex items-start">
                   <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 mr-4 mt-1 font-heading text-xl font-bold">3</span> 
                   <div>
-                    <strong className="block text-foreground mb-1">High-Tech Grip</strong>
-                    <span className="text-sm">Sutiã interno multitécnicas que ancora o sulco mamário para que a prótese não desça (bottoming out).</span>
+                    <strong className="block text-foreground mb-1">Grip Plane (Sutiã Interno)</strong>
+                    <span className="text-sm">Sutiã interno multitécnicas que ancora o sulco mamário para que a prótese se estabilize e não desça (bottoming out).</span>
                   </div>
                 </li>
               </ul>
@@ -112,7 +112,7 @@ export default function MamaPage() {
              <div className="grid md:grid-cols-2 gap-8 text-left">
                 <div className="group bg-background/5 border border-white/10 rounded-[2rem] p-10 hover:bg-background/10 transition-all duration-[600ms] hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
                   <CheckCircle2 className="w-8 h-8 mb-4 text-[#D1B48C] transition-transform duration-[800ms] group-hover:rotate-[360deg] group-hover:scale-110" />
-                  <h3 className="font-heading text-2xl font-semibold mb-4 text-[#D1B48C] transform transition-transform duration-500 group-hover:translate-x-2">Sutiã Interno</h3>
+                  <h3 className="font-heading text-2xl font-semibold mb-4 text-[#D1B48C] transform transition-transform duration-500 group-hover:translate-x-2">Sutiã Interno (Grip Plane)</h3>
                   <p className="opacity-90 text-sm leading-relaxed text-[#F5EEE6] transform transition-transform duration-500 group-hover:translate-x-2 delay-75">
                     Uma técnica revolucionária que utiliza os próprios tecidos da paciente ou fios farpados para estabilizar a base da mama, atuando como um sustentáculo permanente.
                   </p>

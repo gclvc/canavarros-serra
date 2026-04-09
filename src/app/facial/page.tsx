@@ -61,21 +61,21 @@ export default function FacialPage() {
                 O antigo estigma da cirurgia facial era a face "esticada" ou o "vento no rosto". Isso ocorria porque os cirurgiões tracionavam exaustivamente o envelope cutâneo (a pele).
               </p>
               <p>
-                A técnica avançada <strong>Deep Plane Extended</strong> atua profundamente nas estruturas ligamentares da face, liberando a musculatura e reposicionando a "fundação" do rosto em seu vetor original e obstrutivo, antes dos ligamentos se soltarem com a idade.
+                A técnica avançada <strong>Deep Plane</strong> atua profundamente nas estruturas ligamentares da face, liberando a musculatura e a pele para o reposicionamento da verdadeira "fundação" do rosto em seu vetor original, sem tensão cutânea.
               </p>
               <ul className="space-y-6 pt-6 border-t border-border/50">
                 <li className="flex items-start transform transition-all duration-500 group-hover:translate-x-2">
                   <Droplet className="w-8 h-8 mr-4 text-primary shrink-0 transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-110" />
                   <div>
-                    <strong className="block text-foreground mb-1 text-xl">Lipoenxertia Estrutural</strong>
-                    <span className="text-sm">Devolvemos a volumetria jovem aos sulcos da face usando o próprio enxerto de gordura da paciente (Stem Cells).</span>
+                    <strong className="block text-foreground mb-1 text-xl">Lipoenxertia / Medicina Regenerativa</strong>
+                    <span className="text-sm">Devolvemos a volumetria e vitalidade jovem à face combinando Células-Tronco, Nanofat e Microfat tracionados juntamente à pele.</span>
                   </div>
                 </li>
                 <li className="flex items-start transform transition-all duration-500 group-hover:translate-x-2 delay-100">
                   <ShieldCheck className="w-8 h-8 mr-4 text-primary shrink-0 transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-110 delay-100" />
                   <div>
-                    <strong className="block text-foreground mb-1 text-xl">Cervicoplastia Direta</strong>
-                    <span className="text-sm">Abordagem profunda de pescoço, suturando bandas platismais e definindo um maxilar e pescoço angulados e firmes.</span>
+                    <strong className="block text-foreground mb-1 text-xl">Cervicoplastia Deep Neck</strong>
+                    <span className="text-sm">Abordagem profunda de pescoço focada em definir impecavelmente o contorno e angulação do maxilar inferior.</span>
                   </div>
                 </li>
               </ul>
@@ -108,9 +108,9 @@ export default function FacialPage() {
                </div>
 
                <div className="group bg-card border border-border rounded-[3rem] p-12 transition-all duration-700 hover:shadow-2xl hover:-translate-y-3 cursor-pointer">
-                  <h3 className="font-heading text-3xl font-bold mb-4 text-primary transition-transform duration-500 group-hover:translate-x-2">Frontoplastia</h3>
+                  <h3 className="font-heading text-3xl font-bold mb-4 text-primary transition-transform duration-500 group-hover:translate-x-2">Lift da Sobrancelha por Vídeo</h3>
                   <p className="opacity-90 leading-relaxed text-foreground/80 mb-6 transition-transform duration-500 group-hover:translate-x-2 delay-75">
-                    Muitas pacientes não enxergam que a sobrancelha caída é a vilã do rosto opaco. Através de pequenas incisões (Lifting de Sobrancelha Tracionado), erguemos suavemente o terço superior.
+                    Muitas pacientes não enxergam que a sobrancelha caída é a vilã do olhar cansado. Através de pequenas incisões no couro cabeludo (Videoendoscopia), erguemos suavemente o terço superior criando o belíssimo efeito "ponytail" sem cicatriz aparente.
                   </p>
                   <ul className="space-y-3 text-sm transition-transform duration-500 group-hover:translate-x-2 delay-150">
                     <li className="flex items-center"><CheckCircle2 className="w-5 h-5 mr-3 text-primary shrink-0 transition-transform duration-500 group-hover:rotate-[360deg]" /> Restaura a suavidade da testa</li>
