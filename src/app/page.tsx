@@ -27,12 +27,10 @@ export default function Home() {
             <a href="#sobre" className="text-sm font-medium hover:text-primary transition-colors text-foreground/80">Sobre nós</a>
           </nav>
           
-          <Button asChild className=\"rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 hidden sm:flex shadow-md shadow-primary/20\">
-            <a href=\"https://wa.me/5565996236875\" target=\"_blank\" rel=\"noopener noreferrer\">
+          <a href="https://wa.me/5565996236875" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-sm transition-all rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 hidden sm:flex shadow-md shadow-primary/20">
               <Phone className="w-4 h-4 mr-2" />
               (65) 99623-6875
             </a>
-          </Button>
         </div>
       </header>
 
@@ -53,12 +51,12 @@ export default function Home() {
               </p>
               
               <div className="flex flex-wrap gap-4 pt-6">
-                <Button asChild size="lg" className="rounded-full text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground shadow-xl shadow-primary/30 h-14">
-                  <a href="https://wa.me/5565996236875" target="_blank" rel="noopener noreferrer">Fale no WhatsApp</a>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="rounded-full text-base px-8 border-primary/20 text-foreground hover:bg-primary/5 h-14">
-                  <a href="#mamas">Nossos Procedimentos</a>
-                </Button>
+                <a href="https://wa.me/5565996236875" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-sm transition-all rounded-full text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground shadow-xl shadow-primary/30 h-14">
+              Fale no WhatsApp
+            </a>
+                <a href="#mamas" className="inline-flex items-center justify-center text-sm transition-all rounded-full text-base px-8 border-primary/20 text-foreground hover:bg-primary/5 h-14">
+              Nossos Procedimentos
+            </a>
               </div>
             </div>
             
@@ -173,9 +171,9 @@ export default function Home() {
                   <li className="flex items-start"><CheckCircle2 className="w-6 h-6 mr-3 text-primary shrink-0 mt-0.5" /> <p><strong>Segurança Elevada:</strong> Prevenção do afinamento de tecidos e mapeamento digital anatômico.</p></li>
                 </ul>
               </div>
-              <Button asChild className="rounded-full mt-6 bg-primary hover:bg-primary/90 shadow-md h-14 px-8 text-base">
-                <a href="#contato">Saber mais sobre a R24R <ChevronRight className="w-5 h-5 ml-2" /></a>
-              </Button>
+              <a href="#contato" className="inline-flex items-center justify-center text-sm transition-all rounded-full mt-6 bg-primary hover:bg-primary/90 shadow-md h-14 px-8 text-base">
+              Saber mais sobre a R24R <ChevronRight className="w-5 h-5 ml-2" />
+            </a>
             </div>
           </div>
         </section>
@@ -199,9 +197,9 @@ export default function Home() {
                   <li className="flex items-start"><CheckCircle2 className="w-6 h-6 mr-3 text-primary shrink-0 mt-0.5" /> <p><strong>Lipotransferência Estrutural:</strong> Uso do próprio tecido do paciente para restabelecer os volumes de juventude.</p></li>
                 </ul>
               </div>
-              <Button asChild className="rounded-full mt-6 bg-primary hover:bg-primary/90 shadow-md h-14 px-8 text-base">
-                <a href="#contato">Agendar Avaliação Facial <ChevronRight className="w-5 h-5 ml-2" /></a>
-              </Button>
+              <a href="#contato" className="inline-flex items-center justify-center text-sm transition-all rounded-full mt-6 bg-primary hover:bg-primary/90 shadow-md h-14 px-8 text-base">
+              Agendar Avaliação Facial <ChevronRight className="w-5 h-5 ml-2" />
+            </a>
             </div>
 
             <div className="relative h-[400px] md:h-[650px] w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-secondary/20 lg:order-2 order-1">
@@ -320,9 +318,9 @@ export default function Home() {
                 </p>
               </div>
 
-               <Button asChild className="rounded-full mt-4 bg-primary hover:bg-primary/90 shadow-md h-12 px-8">
-                 <a href="#contato">Conheça as sedes <ChevronRight className="w-4 h-4 ml-2" /></a>
-               </Button>
+               <a href="#contato" className="inline-flex items-center justify-center text-sm transition-all rounded-full mt-4 bg-primary hover:bg-primary/90 shadow-md h-12 px-8">
+              Conheça as sedes <ChevronRight className="w-4 h-4 ml-2" />
+            </a>
             </div>
 
           </div>
@@ -360,9 +358,9 @@ export default function Home() {
                    <input type="checkbox" className="mt-1" />
                    <p className="text-xs text-foreground/60 w-11/12">Autorizo o contato via WhatsApp e concordo com a política de privacidade.</p>
                  </div>
-                 <Button asChild className="w-full rounded-full mt-6 bg-primary hover:bg-primary/90 h-14 text-base shadow-md">
-                   <a href="https://wa.me/5565996236875" target="_blank" rel="noopener noreferrer">Solicitar Contato Especializado</a>
-                 </Button>
+                 <a href="https://wa.me/5565996236875" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-sm transition-all w-full rounded-full mt-6 bg-primary hover:bg-primary/90 h-14 text-base shadow-md">
+              Solicitar Contato Especializado
+            </a>
                </form>
             </div>
 
