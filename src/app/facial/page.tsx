@@ -1,3 +1,4 @@
+// Force vercel cache invalidation
 import Image from "next/image"
 import { FadeIn } from "@/components/ui/fade-in"
 import { ChevronRight, ShieldCheck, CheckCircle2, Droplet, Sparkles, Activity, PlayCircle } from "lucide-react"

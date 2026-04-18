@@ -80,7 +80,7 @@ export function Header() {
               {link.name}
             </Link>
           ))}
-          <a href="#contato" className="inline-flex mt-8 items-center justify-center text-lg transition-all rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 shadow-xl" onClick={() => setMobileMenuOpen(false)}>
+          <a href="#contato" className="inline-flex mt-8 items-center justify-center text-lg transition-all rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 shadow-xl" onClick={() => setIsOpen(false)}>
             Atendimento Online
           </a>
         </nav>
